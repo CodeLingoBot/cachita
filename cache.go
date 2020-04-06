@@ -146,6 +146,8 @@ func directTypeAssert(source, target interface{}) bool {
 		*v, ok = source.(map[string]string)
 	case *map[string]interface{}:
 		*v, ok = source.(map[string]interface{})
+	default:
+		return false
 	}
 	return ok
 }
